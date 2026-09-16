@@ -500,27 +500,75 @@
       <p>Setiap paket kami dirancang dengan teliti, menggunakan bahan-bahan segar berkualitas tinggi dan disajikan dengan penuh keahlian untuk memastikan pengalaman kuliner yang tak terlupakan bagi Anda dan tamu Anda.</p>
     </div>
 
-    <div class="paket-showcase reveal">
-      <a href="paket.html" class="paket-showcase-card">
-        <img src="images/nasi_bakar_paketA.jpg" alt="Nasi Kepal & Nasi Bakar">
-        <div class="paket-showcase-overlay">
-          <h3>Nasi Kepal &amp; Nasi Bakar</h3>
-          <span class="ps-meta">🍴 Rp 6.000 – Rp 12.000</span>
-        </div>
-      </a>
-      <a href="paket.html" class="paket-showcase-card">
-        <img src="images/Nasi Dos RR77.jpg" alt="Menu Nasi Box">
-        <div class="paket-showcase-overlay">
-          <h3>Menu Nasi Box</h3>
-          <span class="ps-meta">🍴 Rp 20.000 / Box</span>
-        </div>
-      </a>
-      <a href="paket.html" class="paket-showcase-card">
-        <img src="images/nasi_mika_bento.jpg" alt="Nasi Mika Bento">
-        <div class="paket-showcase-overlay">
-          <h3>Nasi Mika Bento</h3>
-          <span class="ps-meta">🍴 3 Varian Tersedia</span>
-        </div>
+    ```html
+<style>
+.paket-showcase{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.paket-showcase-card{
+  position:relative;
+  display:block;
+  width:100%;
+  height:280px;
+  overflow:hidden;
+  border-radius:18px;
+}
+
+.paket-showcase-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+.paket-showcase-overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+@media(max-width:768px){
+  .paket-showcase{
+    grid-template-columns:1fr;
+  }
+  .paket-showcase-card{
+    height:280px;
+  }
+}
+</style>
+
+<div class="paket-showcase reveal">
+  <a href="paket.html" class="paket-showcase-card">
+    <img src="images/nasi_bakar_paketA.jpg" alt="Nasi Kepal & Nasi Bakar">
+    <div class="paket-showcase-overlay">
+      <h3>Nasi Kepal &amp; Nasi Bakar</h3>
+      <span class="ps-meta">🍴 Rp 6.000 – Rp 12.000</span>
+    </div>
+  </a>
+
+  <a href="paket.html" class="paket-showcase-card">
+    <img src="images/Nasi Dos RR77.jpg" alt="Menu Nasi Box">
+    <div class="paket-showcase-overlay">
+      <h3>Menu Nasi Box</h3>
+      <span class="ps-meta">🍴 Rp 20.000 / Box</span>
+    </div>
+  </a>
+
+  <a href="paket.html" class="paket-showcase-card">
+    <img src="images/nasi_mika_bento.jpg" alt="Nasi Mika Bento">
+    <div class="paket-showcase-overlay">
+      <h3>Nasi Mika Bento</h3>
+      <span class="ps-meta">🍴 3 Varian Tersedia</span>
+    </div>
+  </a>
+</div>
+```
+
       </a>
     </div>
 
