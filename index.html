@@ -704,22 +704,232 @@
     </div>
   </div>
 </section>
+```html
 <style>
-.google-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px;width:100%}.google-review{background:#fff;border-radius:16px;padding:20px;text-align:left;box-shadow:0 8px 25px rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.06)}.review-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.review-stars{letter-spacing:1px}.google-review p{margin:0 0 12px;line-height:1.6;font-size:14px}.google-review small{opacity:.65}@media(max-width:768px){.google-reviews{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:15px}.google-review{min-width:85%;scroll-snap-align:start}}
+#testimoni .block-inner{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.google-rating-card{
+  position:relative;
+  width:100%;
+  max-width:760px;
+  margin:34px auto 0;
+  padding:42px 36px;
+  box-sizing:border-box;
+  text-align:center;
+  background:linear-gradient(145deg,#ffffff,#faf9f6);
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:26px;
+  box-shadow:0 18px 50px rgba(0,0,0,.10);
+  overflow:hidden;
+}
+
+.google-rating-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:110px;
+  height:3px;
+  transform:translateX(-50%);
+  background:currentColor;
+  opacity:.7;
+}
+
+.google-rating-label{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:18px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  opacity:.65;
+}
+
+.google-rating-title{
+  margin:0 0 12px;
+  font-size:clamp(24px,4vw,36px);
+  line-height:1.2;
+  font-weight:800;
+}
+
+.google-rating-subtitle{
+  max-width:520px;
+  margin:0 auto 26px;
+  font-size:15px;
+  line-height:1.7;
+  opacity:.68;
+}
+
+.google-rating-stars{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  margin:8px 0 26px;
+  font-size:27px;
+  letter-spacing:2px;
+}
+
+.google-rating-stars span{
+  display:inline-block;
+}
+
+.google-review-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:50px;
+  padding:0 25px;
+  box-sizing:border-box;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:750;
+  letter-spacing:.1px;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    opacity .25s ease;
+}
+
+.google-review-button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+
+.google-review-button:active{
+  transform:translateY(-1px);
+}
+
+.google-rating-note{
+  margin:18px 0 0;
+  font-size:11px;
+  line-height:1.5;
+  opacity:.5;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  #testimoni .block-inner{
+    width:100%;
+  }
+
+  .google-rating-card{
+    width:calc(100% - 24px);
+    margin:28px auto 0;
+    padding:34px 20px;
+    border-radius:22px;
+  }
+
+  .google-rating-title{
+    font-size:27px;
+  }
+
+  .google-rating-subtitle{
+    font-size:14px;
+    line-height:1.65;
+  }
+
+  .google-rating-stars{
+    font-size:23px;
+    gap:3px;
+    margin-bottom:24px;
+  }
+
+  .google-review-button{
+    width:100%;
+    min-height:52px;
+    padding:0 18px;
+  }
+}
+
+/* SMALL MOBILE */
+@media(max-width:380px){
+
+  .google-rating-card{
+    width:calc(100% - 18px);
+    padding:30px 16px;
+  }
+
+  .google-rating-title{
+    font-size:24px;
+  }
+
+  .google-rating-stars{
+    font-size:21px;
+  }
+}
 </style>
+
+
 <section class="block" id="testimoni">
+
   <div class="block-inner">
+
     <div class="block-head reveal">
       <span class="eyebrow">Testimoni Pelanggan</span>
       <h2>Kata Pelanggan Kami</h2>
     </div>
-    <div class="ratingng-stars">★★★★★</div>
-      <div class="rating-score">5.0</div>
-      <div class="ratin-card reveal">
-      <div class="ratig-count">Rating dari 52 ulasan Google</div>
-      <a class="rating-link" href="https://maps.app.goo.gl/xUbSWCp5WUrJT9c16" target="_blank" rel="noopener">⭐ Lihat semua ulasan di Google Maps →</a>
 
-     </div>
+
+    <div class="google-rating-card reveal">
+
+      <div class="google-rating-label">
+        <span>●</span>
+        <span>Google Reviews</span>
+      </div>
+
+
+      <h3 class="google-rating-title">
+        Dengarkan Kata Pelanggan Kami
+      </h3>
+
+
+      <p class="google-rating-subtitle">
+        Lihat pengalaman dan ulasan pelanggan Rumah Rempah 77
+        langsung melalui Google.
+      </p>
+
+
+      <div class="google-rating-stars"
+           aria-label="Google Reviews">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+
+
+      <a
+        class="google-review-button"
+        href="https://maps.app.goo.gl/xUbSWCp5WUrJT9c16"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        ⭐ Lihat Ulasan di Google →
+
+      </a>
+
+
+      <p class="google-rating-note">
+        Ulasan ditampilkan langsung melalui Google Maps.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+```
 </section>
 <div class="cta-band">
   <span class="eyebrow">Ada Acara dalam Waktu Dekat?</span>
